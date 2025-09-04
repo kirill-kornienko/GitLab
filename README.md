@@ -27,6 +27,9 @@
 ```
 
 $ sudo -s
+sudo -u postgres createuser --pwprompt zabbix
+sudo -u postgres createdb -O zabbix zabbix
+systemctl start postgresql
 wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
 dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
 apt update
@@ -37,6 +40,7 @@ zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psq
 systemctl restart zabbix-server zabbix-agent apache2
 systemctl enable zabbix-server zabbix-agent apache2
 
+
 ```
 
 ![Авторизация в админке](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix.png)
@@ -46,69 +50,27 @@ systemctl enable zabbix-server zabbix-agent apache2
 
 ### Задание 2
 
-`Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
 
 ```
-Поле для вставки кода...
-....
-....
-....
-....
+
+sudo -s
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+apt update
+apt install zabbix-agent
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent
+
 ```
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
 
-
+![Configuration > Hosts]((https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix_hosts.png)`
+![log agent vm1](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/vm1.png))`
+![log agent vm2](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/vm2.png)`
+![Latest Data](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix_Latest_Data.png)`
 ---
 
-### Задание 3
-
-`Приведите ответ в свободной форме........`
-
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
-
-### Задание 4
-
-`Приведите ответ в свободной форме........`
-
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота](ссылка на скриншот)`
