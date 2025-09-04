@@ -25,7 +25,7 @@
 ### Задание 1
 
 ```
-Поле для вставки кода...
+
 $ sudo -s
 wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
 dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
@@ -39,7 +39,7 @@ systemctl enable zabbix-server zabbix-agent apache2
 
 ```
 
-
+![Авторизация в админке](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix.png)
 
 
 ---
