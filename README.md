@@ -66,9 +66,13 @@ systemctl enable zabbix-agent
 
 
 ![Configuration > Hosts](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix_hosts.png)`
+
 ![log agent vm1](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/vm1.png)`
+
 ![log agent vm2](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/vm2.png)`
+
 ![Latest Data](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix_Latest_Data.png)`
+
 ---
 
 
