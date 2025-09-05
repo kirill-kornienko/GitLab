@@ -40,25 +40,28 @@
 
 
 ```
+stages:
+  - test
 
-sudo -s
-wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
-dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
-apt update
-apt install zabbix-agent
-systemctl restart zabbix-agent
-systemctl enable zabbix-agent
+go-version-check:
+  stage: test
+  image: golang:1.17
+  script:
+    - echo "Проверка версии Go"
+    - go version
+    - echo "Проверка доступности Go команд"
+    - go env
+    - echo "Pipeline работает корректно!"
+
 
 ```
 
 
-![Configuration > Hosts](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix_hosts.png)`
+![pipeline](https://github.com/kirill-kornienko/GitLab/blob/main/pipeline.png)`
 
-![log agent vm1](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/vm1.png)`
+![pipeline2](https://github.com/kirill-kornienko/GitLab/blob/main/pipeline2.png)`
 
-![log agent vm2](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/vm2.png)`
 
-![Latest Data](https://github.com/kirill-kornienko/Zabbix1/blob/main/img/Zabbix_Latest_Data.png)`
 
 ---
 
